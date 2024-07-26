@@ -9,6 +9,7 @@ import (
 )
 
 func TrelloAPI() {
+
 	type Board struct {
 		ID   string `json:"id"`
 		Name string `json:"name"`
@@ -27,14 +28,14 @@ func TrelloAPI() {
 
 	url := fmt.Sprintf("https://api.trello.com/1/members/%s/boards?key=%s&token=%s&filter=open", memberID, key, token)
 
-	resp, err := http.Get(url)
+	response, err := http.Get(url)
 	if err != nil {
 		fmt.Println(err)
 		return
 	}
-	defer resp.Body.Close()
+	defer response.Body.Close()
 
-	body, err := io.ReadAll(resp.Body)
+	body, err := io.ReadAll(response.Body)
 	if err != nil {
 		fmt.Println(err)
 		return
