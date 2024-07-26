@@ -35,8 +35,9 @@ func main() {
 	}
 	defer resp.Body.Close()
 
-	body, err := io.ReadAll(resp.Body)
+	body, err := io.ReadAll((resp.Body))
 	if err != nil {
+		a
 		fmt.Println(err)
 		return
 	}
@@ -52,4 +53,4 @@ func main() {
 		fmt.Println(board.Name)
 	}
 
-}
+} // Path: go.mod
