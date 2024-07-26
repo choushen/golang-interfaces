@@ -3,30 +3,30 @@ package rpg
 import "fmt"
 
 type Enemy struct {
-	health  int
-	attack  int
-	defence int
-	weapon  string
+	Health      int
+	AttackPower int
+	Defense     int
+	Weapon      string
 }
 
 func (e *Enemy) Attack() {
-	fmt.Printf("Enemy attacks for %d damage\n", e.attack)
+	fmt.Printf("Enemy attacks for %d damage\n", e.AttackPower)
 }
 
 func (e *Enemy) Defend() {
-	fmt.Printf("Enemy protect itself for %d damage\n", e.defence)
+	fmt.Printf("Enemy protect itself for %d damage\n", e.Defense)
 }
 
 func (e *Enemy) SpecialAttack() {
-	fmt.Printf("Enemy special attacks for %d damage\n", e.attack*2)
+	fmt.Printf("Enemy special attacks for %d damage\n", e.AttackPower*2)
 }
 
 type Goblin struct {
 	Enemy
-	homeland string
+	Homeland string
 }
 
 type Orc struct {
 	Enemy
-	tribe string
+	Tribe string
 }

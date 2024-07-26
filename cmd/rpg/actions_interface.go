@@ -17,4 +17,6 @@ type Defend interface {
 func CounterAttack(m Mob) {
 	m.Defend()
 	m.Attack()
+	m.Defend()
+	m.SpecialAttack()
 }
