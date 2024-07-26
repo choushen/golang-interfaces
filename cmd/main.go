@@ -1,11 +1,15 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+
+	"github.com/choushen/go-user-auth-api/cmd/api"
+)
 
 func main() {
 	// This is a comment
 	fmt.Println("Hello, World!")
 
 	// Call the TrelloAPI function
-	TrelloAPI()
+	api.TrelloAPI()
 }
