@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/choushen/go-user-auth-api/cmd/api"
+	"github.com/choushen/homeless-golang-code/cmd/api"
 )
 
 func main() {
